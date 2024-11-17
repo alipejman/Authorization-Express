@@ -25,7 +25,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Login-Reg
 app.use(favicon(path.join(__dirname, 'views', 'icon.png')));
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
-app.set('layout', './layout/main.ejs');
+app.set('layout', 'layout/main');
 
 // Middleware ها
 app.use(express.urlencoded({ extended: true }));
