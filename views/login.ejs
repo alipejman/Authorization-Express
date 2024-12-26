@@ -1,8 +1,11 @@
 <div class="px-4 py-5 my-5 text-center">
     <img class="d-block mx-auto mb-4" src="https://media.licdn.com/dms/image/D5612AQEHlMnpL5pg7g/article-cover_image-shrink_720_1280/0/1684628937431?e=2147483647&v=beta&t=KiP3xUV_nrfkbJ5XHR8StdZVMyM6b4V9-aQZqOmQ7v4" alt="" width="auto" height="150">
     <h1 class="display-5 fw-bold">Login Here</h1>
+    <p class="display-6 fw-bold mt-3 text-success">
+        <%= messages?.success?.[0] ?? "" %>
+    </p>
     <p class="display-6 fw-bold mt-3 text-danger">
-        <%= messages?.error?? ""%>
+        <%= messages?.error?.[0] ?? "" %>
     </p>
     <div class="col-lg-3 mx-auto">
         <form action="/login" method="POST">
